@@ -1,15 +1,15 @@
+import { Avatar } from "./Avatar";
+import { Comment } from "./Comment";
+
 import styles from "./Post.module.css";
+
 
 export function Post() {
   return (
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img
-            className={styles.avatar}
-            src="https://media.licdn.com/dms/image/D4D03AQEn7JPvjHWoIA/profile-displayphoto-shrink_400_400/0/1704826509874?e=1711584000&v=beta&t=AmQ9uf5_k0fVLxG1GRKU7tf2Mb61onpY4wQu5fBGC0I"
-            alt=""
-          />
+          <Avatar src='https://media.licdn.com/dms/image/D4D03AQEn7JPvjHWoIA/profile-displayphoto-shrink_400_400/0/1704826509874?e=1711584000&v=beta&t=AmQ9uf5_k0fVLxG1GRKU7tf2Mb61onpY4wQu5fBGC0I' />
           <div className={styles.authorInfo}>
             <strong>Tamara Montijo</strong>
             <span>Frontend Engineer</span>
@@ -48,6 +48,12 @@ export function Post() {
           <button type="submit">Publicar</button>
         </footer>
       </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
   );
 }
