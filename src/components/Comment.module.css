@@ -66,6 +66,7 @@
   background: transparent;
   border: 0;
   cursor: pointer;
+  color: var(--white);
 
   display: flex;
   align-items: center;
